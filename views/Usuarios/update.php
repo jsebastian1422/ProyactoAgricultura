@@ -8,6 +8,7 @@ use yii\helpers\Html;
 $this->title = 'Update Usuarios: ' . $model->usuario_id;
 $this->params['breadcrumbs'][] = ['label' => 'Usuarios', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->usuario_id, 'url' => ['view', 'id' => $model->usuario_id]];
+$this->params['breadcrumbs'][] = ['label' => $usuariosInfoModel->usuario_id, 'url' => ['view', 'id' => $usuariosInfoModel->usuario_id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="usuarios-update">
@@ -16,6 +17,7 @@ $this->params['breadcrumbs'][] = 'Update';
 
     <?= $this->render('_form', [
         'model' => $model,
+        'model2'=> $usuariosInfoModel,
     ]) ?>
 
 </div>
