@@ -12,10 +12,17 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="">
-    <div class="col-12 col-sm-6 col-md-8 col-lg-9 col-xl-6 login-img">
-    <img src="http://www.vinosycaminos.com/multimedia/images/SocuellamosPuestadesol.jpg" alt="">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 login-img">
+        <!---Agregar el nombre de la Empresa-->
+        <div class="cont_empre">
+            <h1 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"><?= Html::encode($this->title)?></h1>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 descrip_empresa">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui ipsam commodi assumenda hic sit ipsa excepturi ad! Voluptate ipsam sunt suscipit voluptatum similique maiores et voluptatem at obcaecati. Est, praesentium!</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque corporis, dolor vero distinctio reprehenderit velit ab, quibusdam expedita qui quidem libero quod minima quo sequi amet aspernatur cupiditate quam odit.</p>
+            </div>
+        </div>
     </div>
-    <div class="col-12 col-sm-6 col-md-8 col-lg-9 col-xl-2 site-login">
+    <div class="col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 site-login">
         <!--<?= Html::encode($this->title) ?>-->
         <h1>Iniciar sesion</h1>
         <?php $form = ActiveForm::begin([
