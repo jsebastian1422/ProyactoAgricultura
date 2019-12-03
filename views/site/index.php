@@ -5,7 +5,16 @@
 $this->title = 'Gestion Agricola';
 ?>
 <div class="site-index">
-
+    <div class="sidenav-wrap navbar-brand">
+        <!--Nota: para poder usar el sidenav al contenido que iria en la parte centrar de la pagina tienes de agregar le al div que los agrupe a todos la clase  info_central-->
+            <ul>
+                <a href="index.html"><li class="menu_activo"><img src="img/iconos/casa.png">Crear Usuario</li></a>
+                <a href="equipos.html"><li><img src="img/iconos/portafolio.png">Ver infomacion</li></a>
+                <a href="tienda.html"><li class=""><img src="img/iconos/carro.png"></li></a>
+                <a href="sponsors.html"><li><img src="img/iconos/sobre-mi.png"></li></a>
+          </ul>
+    </div>
+    <div class="container">
     <div class="jumbotron">
         <h1>Congratulations!</h1>
 
@@ -16,7 +25,7 @@ $this->title = 'Gestion Agricola';
 
     <div class="body-content">
 
-        <div class="row">
+        <div class="row info_central">
             <div class="col-lg-4">
                 <h2>Heading</h2>
 
@@ -49,5 +58,7 @@ $this->title = 'Gestion Agricola';
             </div>
         </div>
 
+    </div>
+    
     </div>
 </div>

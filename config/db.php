@@ -2,7 +2,7 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=gestion_agricola',
+    'dsn' => 'mysql:host=localhost;dbname=gestionagricola',
     'username' => 'root',
     'password' => '',
     'charset' => 'utf8',
