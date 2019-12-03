@@ -2,9 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=localhost;dbname=gestion_agricola',
-    'username' => 'root',
-    'password' => '',
+    'dsn' => 'mysql:host=remotemysql.com;dbname=ABPbZoyMrN',
+    'username' => 'ABPbZoyMrN',
+    'password' => 'Mg2DJBicoS',
     'charset' => 'utf8',
 
     // Schema cache options (for production environment)
