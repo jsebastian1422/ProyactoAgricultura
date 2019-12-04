@@ -9,6 +9,7 @@ use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use kartik\sidenav\SideNav;
 
 AppAsset::register($this);
 ?>
@@ -53,28 +54,59 @@ AppAsset::register($this);
 
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => $menuItems/*[
-            
-            Yii::$app->user->isGuest ? (
-                
-            ) : (
-                ['label' => 'Home', 'url' => ['/home']],
-                ['label' => 'Login', 'url' => ['/site/login']]
-                
-            )
-            
-        ],*/
+        'items' => $menuItems
     ]);
     NavBar::end();
+        if (!Yii::$app->user->isGuest) {
     ?>
-
-    <div class="container">
-        <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
+    
+    <?php
+       //Crear los permisos del rol
+       $rol = Yii::$app->user->identity->rol_id;
+        switch ($rol) {
+           case '1':
+                $menuItemsSideVar[] = [
+                    'url' => ['/home'],'label' => 'Home','icon' => 'home'
+                ];
+                $menuItemsSideVar[] = [
+                    'url' => '#','label' => 'Home','icon' => 'home'
+                ];
+               break;
+           default:
+                $menuItemsSideVar[] = [
+                    'url' => '#','label' => 'Home','icon' => 'home'
+                ];
+               break;
+       }
+    ?>
+    <div class="container col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10" style="padding-left: 0px; padding-top:30px;">
+        <div class="container col-xs-5 col-sm- col-lg-3 sidenav-wrap">
+            <div class="">    
+            <?php    
+                echo SideNav::widget([
+                    'type' => SideNav::TYPE_DEFAULT,
+                    'items' => $menuItemsSideVar,
+                ]);
+            ?>
+            </div>
+        </div>    
+        <div class="col-xs-7 col-sm-8 col-lg-9 pruebas">
+            <?= Breadcrumbs::widget([
+                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            ]) ?>
+            <?= Alert::widget() ?>
+            <?= $content ?>
+        </div>
     </div>
+    <?php }else{?>
+        <div class="container">
+            <?= Breadcrumbs::widget([
+                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+            ]) ?>
+            <?= Alert::widget() ?>
+            <?= $content ?>
+        </div>
+    <?php }?>
 </div>
 
 <footer class="footer">

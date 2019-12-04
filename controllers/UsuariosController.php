@@ -72,6 +72,7 @@ class UsuariosController extends Controller
         //$tiposDocumentoModel = new TiposDocumentos();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            echo $model2->load(Yii::$app->request->post());
             if($model2->load(Yii::$app->request->post()) && $model2->save()){
                 return $this->redirect(['view', 'id' => $model->usuario_id]);
             }
