@@ -29,6 +29,22 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'rol_id') ?>
 
+    <?php // echo $form->field($model, 'documento') ?>
+
+    <?php // echo $form->field($model, 'tipo_documento') ?>
+
+    <?php // echo $form->field($model, 'nombre') ?>
+
+    <?php // echo $form->field($model, 'edad') ?>
+
+    <?php // echo $form->field($model, 'sexo_id') ?>
+
+    <?php // echo $form->field($model, 'celular') ?>
+
+    <?php // echo $form->field($model, 'direccion') ?>
+
+    <?php // echo $form->field($model, 'eps') ?>
+
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
         <?= Html::resetButton('Reset', ['class' => 'btn btn-outline-secondary']) ?>

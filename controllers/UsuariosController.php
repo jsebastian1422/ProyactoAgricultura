@@ -5,7 +5,6 @@ namespace app\controllers;
 use Yii;
 use app\models\Usuarios;
 use app\models\UsuariosSearch;
-use app\models\UsuariosInformacion;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -55,8 +54,6 @@ class UsuariosController extends Controller
     {
         return $this->render('view', [
             'model' => $this->findModel($id),
-            'usuariosInfoModel' => $this->findModel($id),
-            'tiposDocumentoModel' => $this->findModel($id),
         ]);
     }
 
@@ -68,19 +65,13 @@ class UsuariosController extends Controller
     public function actionCreate()
     {
         $model = new Usuarios();
-        $usuariosInfoModel = new UsuariosInformacion();
-        //$tiposDocumentoModel = new TiposDocumentos();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            if($model2->load(Yii::$app->request->post()) && $model2->save()){
-                return $this->redirect(['view', 'id' => $model->usuario_id]);
-            }
+            return $this->redirect(['view', 'id' => $model->usuario_id]);
         }
 
         return $this->render('create', [
             'model' => $model,
-            'usuariosInfoModel' => $usuariosInfoModel,
-          //  'tiposDocumentoModel' => $tiposDocumentoModel,
         ]);
     }
 

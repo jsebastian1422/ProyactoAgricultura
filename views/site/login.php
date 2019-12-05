@@ -11,7 +11,7 @@ $this->title = 'Login';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="">
+<div class="container">
     <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 login-img">
         <!---Agregar el nombre de la Empresa-->
         <div class="cont_empre">
