@@ -181,3 +181,67 @@ a.desc:after {
     margin-top: 50px;
     width:80%;
 }
+
+
+.sidenav-wrap{
+    background-color: red;
+    height:100vh;
+
+}
+
+
+body {
+    margin: 0;
+    margin-bottom: 40px;
+    /* background-image: url(https://images.pexels.com/photos/339841/pexels-photo-339841.jpeg?cs=srgb&dl=pexels-339841.jpg&fm=jpg); */
+   /* background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    opacity:06; Opacidad 60% */
+    background-color: rgba(255, 255, 255, 0.438);
+
+}
+.terrenos{
+    margin:10px;
+    width:150%;
+    height:100%;
+}
+.terrenos img{
+    width:100%;
+    height:150px;
+}
+
+.conte_img{
+    background-color: rgba(34, 34, 34, 0.322);
+    padding:10px;
+    margin: 2px;
+}
+
+.contenido div{
+    background-color: rgb(53, 53, 53);
+    height:70px;
+    padding:6px;
+    color: #ddd;
+    text-align: center;
+}
+
+.contenido p>strong{
+    font-size: 12px;
+}
+
+.contenido p{
+    font-size: 10px;
+    background-color: rgba(221, 221, 221, 0.315);
+    padding:5px;
+    height:60px;
+}
+
+
+
+footer {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
