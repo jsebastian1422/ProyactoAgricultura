@@ -35,23 +35,35 @@ AppAsset::register($this);
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
+
+    if (Yii::$app->user->isGuest) {
+        $menuItems[] = [
+            'label' => 'Login', 'url' => ['/site/login']
+        ];
+    }else{
+        $menuItems[] = [
+            'label' => 'Home', 'url' => ['/home']
+        ];
+        $menuItems[] = [
+            'label' => 'Logout (' . Yii::$app->user->identity->usuario . ')',
+            'url' => ['/site/logout'],
+            'linkOptions' => ['data-method' => 'post']
+        ];
+    }
+
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
-        'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
+        'items' => $menuItems/*[
+            
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
+                
             ) : (
-                '<li>'
-                . Html::beginForm(['/site/logout'], 'post')
-                . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->usuario . ')',
-                    ['class' => 'btn btn-link logout']
-                )
-                . Html::endForm()
-                . '</li>'
+                ['label' => 'Home', 'url' => ['/home']],
+                ['label' => 'Login', 'url' => ['/site/login']]
+                
             )
-        ],
+            
+        ],*/
     ]);
     NavBar::end();
     ?>
