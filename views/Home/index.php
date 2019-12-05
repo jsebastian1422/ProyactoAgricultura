@@ -2,8 +2,10 @@
 /* @var $this yii\web\View */
 $this->title = 'Gestion Agricola';
 ?>
-<h1>Terrenos</h1>
 <div class="row terrenos">
+    <div class="text_titulo">
+        <h1>Terrenos</h1>
+    </div>
     <div class="col-6 col-md-3 col-3 col-md-3 conte_img">
         <img src="http://nuevo.todoagro.com.ar/Image/papasistemasdesiembra.jpg" alt="">
         <div class="contenido">
