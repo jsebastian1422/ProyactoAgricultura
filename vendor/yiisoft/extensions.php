@@ -93,4 +93,49 @@ return array (
       '@yii/bootstrap4' => $vendorDir . '/yiisoft/yii2-bootstrap4/src',
     ),
   ),
+  'kartik-v/yii2-widget-select2' => 
+  array (
+    'name' => 'kartik-v/yii2-widget-select2',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@kartik/select2' => $vendorDir . '/kartik-v/yii2-widget-select2/src',
+    ),
+  ),
+  'yii2mod/yii2-sweet-alert' => 
+  array (
+    'name' => 'yii2mod/yii2-sweet-alert',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@yii2mod/alert' => $vendorDir . '/yii2mod/yii2-sweet-alert',
+    ),
+  ),
+  'kv4nt/yii2-sweet-alert' => 
+  array (
+    'name' => 'kv4nt/yii2-sweet-alert',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@kv4nt/sweetalert' => $vendorDir . '/kv4nt/yii2-sweet-alert',
+    ),
+  ),
+  'kartik-v/yii2-dialog' => 
+  array (
+    'name' => 'kartik-v/yii2-dialog',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@kartik/dialog' => $vendorDir . '/kartik-v/yii2-dialog/src',
+    ),
+  ),
+  'kartik-v/yii2-grid' => 
+  array (
+    'name' => 'kartik-v/yii2-grid',
+    'version' => '9999999-dev',
+    'alias' => 
+    array (
+      '@kartik/grid' => $vendorDir . '/kartik-v/yii2-grid/src',
+    ),
+  ),
 );

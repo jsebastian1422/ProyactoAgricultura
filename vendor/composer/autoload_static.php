@@ -34,6 +34,7 @@ class ComposerStaticInit48a960a7422c121e8e07ae6e7bab605d
             'yii\\bootstrap\\' => 14,
             'yii\\bootstrap4\\' => 15,
             'yii\\' => 4,
+            'yii2mod\\alert\\' => 14,
         ),
         'p' => 
         array (
@@ -41,8 +42,12 @@ class ComposerStaticInit48a960a7422c121e8e07ae6e7bab605d
         ),
         'k' => 
         array (
+            'kv4nt\\sweetalert\\' => 17,
             'kartik\\sidenav\\' => 15,
+            'kartik\\select2\\' => 15,
             'kartik\\icons\\' => 13,
+            'kartik\\grid\\' => 12,
+            'kartik\\dialog\\' => 14,
             'kartik\\base\\' => 12,
         ),
         'c' => 
@@ -143,19 +148,39 @@ class ComposerStaticInit48a960a7422c121e8e07ae6e7bab605d
         array (
             0 => __DIR__ . '/..' . '/yiisoft/yii2',
         ),
+        'yii2mod\\alert\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/yii2mod/yii2-sweet-alert',
+        ),
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
+        'kv4nt\\sweetalert\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kv4nt/yii2-sweet-alert',
+        ),
         'kartik\\sidenav\\' => 
         array (
             0 => __DIR__ . '/..' . '/kartik-v/yii2-widget-sidenav',
         ),
+        'kartik\\select2\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-widget-select2/src',
+        ),
         'kartik\\icons\\' => 
         array (
             0 => __DIR__ . '/..' . '/kartik-v/yii2-icons/src',
+        ),
+        'kartik\\grid\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-grid/src',
+        ),
+        'kartik\\dialog\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kartik-v/yii2-dialog/src',
         ),
         'kartik\\base\\' => 
         array (
