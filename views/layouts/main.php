@@ -10,10 +10,8 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use kartik\sidenav\SideNav;
-use kartik\icons\Icon;
 
 AppAsset::register($this);
-Icon::map($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -31,7 +29,6 @@ Icon::map($this);
 
 <div class="wrap">
     <?php    
-    Icon::map($this, Icon::EL);
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
