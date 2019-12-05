@@ -66,10 +66,15 @@ class SiteController extends Controller
             return $this->goBack();
         }
 
-        $model->password = '';
-        return $this->render('login', [
-            'model' => $model,
-        ]);
+        if (!Yii::$app->user->isGuest) {
+            return $this->redirect(['/home/index']);
+        }else{
+            $model->password = '';
+            return $this->render('login', [
+                'model' => $model,
+            ]);
+        }
+        
     }
 
     /**

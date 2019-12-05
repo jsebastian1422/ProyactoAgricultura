@@ -74,6 +74,18 @@ AppAsset::register($this);
                 $menuItemsSideVar[] = [
                     'url' => ['/fincas-informacion'],'label' => 'Creacion Fincas','icon' => 'book'
                 ];
+                $menuItemsSideVar[] = [
+                    'url' => ['/agricultores-finca'],'label' => 'Gestion Agricultores Fincas','icon' => 'paperclip'
+                ];
+                $menuItemsSideVar[] = [
+                    'url' => ['/operaciones'],'label' => 'Creacion Operaciones','icon' => 'grain'
+                ];
+                $menuItemsSideVar[] = [
+                    'url' => ['/roles'],'label' => 'Creacion Roles','icon' => 'paste'
+                ];
+                $menuItemsSideVar[] = [
+                    'url' => ['/tipos-documentos'],'label' => 'Creacion Documentos','icon' => 'credit-card'
+                ];
                break;
            default:
                 $menuItemsSideVar[] = [

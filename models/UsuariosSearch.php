@@ -18,7 +18,7 @@ class UsuariosSearch extends Usuarios
     {
         return [
             [['usuario_id', 'rol_id'], 'integer'],
-            [['usuario', 'contrasena', 'fecha_registro', 'estado', 'foto_usuario'], 'safe'],
+            [['usuario', 'contrasena', 'fecha_registro', 'estado', 'foto_usuario', 'sexo_descripcion'], 'safe'],
         ];
     }
 
@@ -43,11 +43,14 @@ class UsuariosSearch extends Usuarios
         $query = Usuarios::find();
 
         // add conditions that should always apply here
-
+        $query->joinWith(['sexo']);
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
         ]);
-
+        $dataProvider->sort->attributes['sexo_descripcion'] = [
+            'asc' => ['sexo_descripcion' => SORT_ASC],
+            'desc' => ['sexo_descripcion' => SORT_DESC],
+        ];            
         $this->load($params);
 
         if (!$this->validate()) {
@@ -66,6 +69,7 @@ class UsuariosSearch extends Usuarios
         $query->andFilterWhere(['like', 'usuario', $this->usuario])
             ->andFilterWhere(['like', 'contrasena', $this->contrasena])
             ->andFilterWhere(['like', 'estado', $this->estado])
+            ->andFilterWhere(['like', 'sexo_descripcion', $this->sexo_descripcion])
             ->andFilterWhere(['like', 'foto_usuario', $this->foto_usuario]);
 
         return $dataProvider;

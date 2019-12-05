@@ -35,6 +35,7 @@ class Usuarios extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+    public $sexo_descripcion;
     public static function tableName()
     {
         return 'usuarios';
