@@ -4,6 +4,7 @@ namespace app\models;
 
 class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
 {
+
     public $usuario_id;
     public $usuario;
     public $contrasena;
@@ -11,6 +12,14 @@ class User extends \yii\base\BaseObject implements \yii\web\IdentityInterface
     public $estado;
     public $foto_usuario;
     public $rol_id;
+    public $documento;
+    public $tipo_documento;
+    public $nombre;
+    public $edad;
+    public $sexo_id;
+    public $celular;
+    public $direccion;
+    public $eps;
     public $authKey;
     public $accessToken;
 
