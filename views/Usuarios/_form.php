@@ -24,18 +24,24 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'rol_id')->textInput() ?>
 
-    <?= $form->field($usuariosInfoModel, 'documento')->textInput() ?>
-    
+    <?= $form->field($model, 'documento')->textInput(['maxlength' => true]) ?>
 
-    <?= 
-        //$documets=TiposDocumentos::find()->all();
-        //$listData=ArrayHelper::map($documets,'tipo_documento','tipo_documento_nombre');
-        $form->field($usuariosInfoModel, 'tipo_documento')->dropDownList(['prompt' => 'Seleccione Uno',  
-            'CC' => 'CEDULA CIUDADANIA',
-            'TI' => 'TARJETA IDENTIDAD']) ?>
+    <?= $form->field($model, 'tipo_documento')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'nombre')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'edad')->textInput() ?>
+
+    <?= $form->field($model, 'sexo_id')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'celular')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'direccion')->textInput(['maxlength' => true]) ?>
+
+    <?= $form->field($model, 'eps')->textarea(['rows' => 6]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Guardar', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

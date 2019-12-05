@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\FincasInformacion */
 
-$this->title = 'Create Fincas Informacion';
-$this->params['breadcrumbs'][] = ['label' => 'Fincas Informacions', 'url' => ['index']];
+$this->title = 'Crear Nueva Finca';
+$this->params['breadcrumbs'][] = ['label' => 'Gestion Fincas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="fincas-informacion-create">
@@ -15,7 +15,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= $this->render('_form', [
         'model' => $model,
-        'modelDocuments' => $modelDocuments,
     ]) ?>
 
 </div>

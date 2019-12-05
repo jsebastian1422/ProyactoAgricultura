@@ -84,6 +84,4 @@ class FincasInformacion extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Usuarios::className(), ['usuario_id' => 'usuario_id']);
     }
-
-   
 }

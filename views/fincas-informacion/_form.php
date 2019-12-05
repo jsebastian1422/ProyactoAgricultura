@@ -1,9 +1,9 @@
 <?php
 
 use yii\helpers\Html;
-use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
-use frontend\models\TiposDocumentos;
+use yii\helpers\ArrayHelper;
+use app\models\TiposDocumentos;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\FincasInformacion */
@@ -15,15 +15,13 @@ use frontend\models\TiposDocumentos;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= 
-        //use app\models\Country;
-        $form->field($model, 'nombre_finca')->textInput(['maxlength' => true])
-        /*$form->field($model, 'tipo_documento')->dropDownList(
-            ArrayHelper::map(TiposDocumentos::find()->all(), 'tipo_documento', 'tipo_documento_name'),
+        $form->field($model, 'tipo_documento')->dropDownList(
+            ArrayHelper::map(TiposDocumentos::find()->all(), 'tipo_documento', 'tipo_documento_nombre'),
             ['prompt' => 'Seleccione Uno']
-        )*/
+        )
     ?>
 
-    
+    <?= $form->field($model, 'documento_finca')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'nombre_finca')->textInput(['maxlength' => true]) ?>
 
@@ -31,8 +29,7 @@ use frontend\models\TiposDocumentos;
 
     <?= $form->field($model, 'direccion_finca')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'usuario_id')->textInput() ?>
-
+    <?= $form->field($model, 'usuario_id')->textInput(['readonly' => true, 'value' => Yii::$app->user->identity->usuario_id,'maxlength' => true]) ?>
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
     </div>

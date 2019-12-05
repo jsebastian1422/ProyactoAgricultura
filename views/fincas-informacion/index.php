@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\FincasInformacionSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Fincas Informacions';
+$this->title = 'Gestion Fincas';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="fincas-informacion-index">
@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Fincas Informacion', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Crear Nueva Finca', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

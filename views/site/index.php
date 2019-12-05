@@ -5,7 +5,7 @@
 $this->title = 'Gestion Agricola';
 ?>
 <div class="site-index">
-
+    <div class="container">
     <div class="jumbotron">
         <h1>Congratulations!</h1>
 
@@ -49,5 +49,7 @@ $this->title = 'Gestion Agricola';
             </div>
         </div>
 
+    </div>
+    
     </div>
 </div>

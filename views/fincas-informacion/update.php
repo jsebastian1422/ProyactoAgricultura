@@ -5,8 +5,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\FincasInformacion */
 
-$this->title = 'Update Fincas Informacion: ' . $model->finca_id;
-$this->params['breadcrumbs'][] = ['label' => 'Fincas Informacions', 'url' => ['index']];
+$this->title = 'Editar Informacion Finca: ' . $model->nombre_finca;
+$this->params['breadcrumbs'][] = ['label' => 'Gestion Fincas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->finca_id, 'url' => ['view', 'id' => $model->finca_id]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>

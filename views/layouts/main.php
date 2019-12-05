@@ -10,8 +10,10 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 use kartik\sidenav\SideNav;
+use kartik\icons\Icon;
 
 AppAsset::register($this);
+Icon::map($this);
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -28,7 +30,8 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
-    <?php
+    <?php    
+    Icon::map($this, Icon::EL);
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
@@ -69,7 +72,10 @@ AppAsset::register($this);
                     'url' => ['/home'],'label' => 'Home','icon' => 'home'
                 ];
                 $menuItemsSideVar[] = [
-                    'url' => '#','label' => 'Home','icon' => 'home'
+                    'url' => ['/usuarios'],'label' => 'Creacion Usuarios','icon' => 'user'
+                ];
+                $menuItemsSideVar[] = [
+                    'url' => ['/fincas-informacion'],'label' => 'Creacion Fincas','icon' => 'book'
                 ];
                break;
            default:
@@ -90,7 +96,7 @@ AppAsset::register($this);
             ?>
             </div>
         </div>    
-        <div class="col-xs-7 col-sm-8 col-lg-9 pruebas">
+        <div class="col-xs-7 col-sm-9 col-lg-10 body-panel-container">
             <?= Breadcrumbs::widget([
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>

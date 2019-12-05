@@ -176,3 +176,8 @@ a.desc:after {
     position: relative;
     background-color: #222 !important;
 }
+
+.body-panel-container {
+    margin-top: 50px;
+    width:80%;
+}

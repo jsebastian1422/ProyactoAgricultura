@@ -6,8 +6,8 @@ use yii\widgets\DetailView;
 /* @var $this yii\web\View */
 /* @var $model app\models\FincasInformacion */
 
-$this->title = $model->finca_id;
-$this->params['breadcrumbs'][] = ['label' => 'Fincas Informacions', 'url' => ['index']];
+$this->title = $model->nombre_finca;
+$this->params['breadcrumbs'][] = ['label' => 'Gestion Fincas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>

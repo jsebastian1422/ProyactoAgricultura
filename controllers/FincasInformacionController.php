@@ -5,8 +5,6 @@ namespace app\controllers;
 use Yii;
 use app\models\FincasInformacion;
 use app\models\FincasInformacionSearch;
-use app\models\TiposDocumentos;
-use app\models\TiposDocumentosSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -67,7 +65,6 @@ class FincasInformacionController extends Controller
     public function actionCreate()
     {
         $model = new FincasInformacion();
-        $modelDocuments = TiposDocumentos::find()->all();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->finca_id]);
@@ -75,7 +72,6 @@ class FincasInformacionController extends Controller
 
         return $this->render('create', [
             'model' => $model,
-            'modelDocuments' => $modelDocuments,
         ]);
     }
 
@@ -128,5 +124,4 @@ class FincasInformacionController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
-    
 }
