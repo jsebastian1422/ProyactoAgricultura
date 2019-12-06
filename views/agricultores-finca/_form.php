@@ -44,7 +44,7 @@ use app\models\Operaciones;
     <?= 
         //Crea select con filtro para estado
         $form->field($model, 'operacion_id')->widget(Select2::classname(), [
-            'data' => ArrayHelper::map(Operaciones::find()->all(), 'operacion_id', 'operacion'),
+            'data' => ArrayHelper::map(Operaciones::find()->all(), 'operacion_id', 'operacion_nombre'),
             'language' => 'de',
             'options' => ['placeholder' => 'SELECCIONE OPERACION'],
             'pluginOptions' => [
